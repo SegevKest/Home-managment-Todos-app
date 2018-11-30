@@ -1,0 +1,27 @@
+<div class="container">
+
+<div class="jumbotron">
+<h1> Our Home Todos </h1>
+<br/>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">_id</th>
+        <th scope="col">Content</th>
+        <th scope="col">Date</th>
+        <th scope="col">Family Member</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of homeService.allTodos;let i=index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ todo._id }}</td>
+        <td>{{ todo.content | titlecase }}</td>
+        <td>{{ todo.creationDate | date }}</td>
+        <td>{{ todo.famMemberID }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

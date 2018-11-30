@@ -1,0 +1,19 @@
+<div class="col-sm-6" >
+    <h2 class="lead">Family Members</h2>
+      <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">_id</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let members of homeService.allFamily;let i=index">
+              <th scope="row">{{ i+1 }}</th>
+              <td>{{ members.name | titlecase }}</td>
+              <td>{{ members._id }}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>

@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="row ">
+        <div class="jumbotron col-sm-12">
+
+          <form [formGroup]=" addTodo" class="col-sm-6" style="float: left">
+              <h1 >Add Some Todos</h1>
+              <br/>
+
+              <div class="form-group ">
+                  <div >
+                    <input placeholder="Content" type="text" formControlName="content" class="form-control" required/>
+                  </div><br/>
+                  <div >
+                    <input placeholder="MM / DD / YYYY" type="datetime-local " formControlName="creationDate" class="form-control" required/>
+                  </div><br/>
+                  <div >
+                    <input placeholder="family Member ID" type="text" formControlName="famMemberID" class="form-control" required/>
+                  </div><br/>
+                </div>
+                <button class="btn btn-danger col-sm-4 " [disabled]="!addTodo.valid" (click)="addTodoList()"> Add Todo</button>
+          </form>
+          <div>
+            <app-family-table class="col-sm-6" style="float:right;"></app-family-table>
+        </div>
+        </div>
+
+    </div>
+    </div>
